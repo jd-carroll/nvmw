@@ -15,11 +15,11 @@ Installation
 
 Clone this repository:
 
-    git clone git://github.com/hakobera/nvmw.git "%HOMEDRIVE%%HOMEPATH%\.nvmw"
+    git clone git://github.com/jd-carroll/nvmw.git "%HOMEDRIVE%%HOMEPATH%\.nvmw"
 
 To activate nvmw, add nvmw directory to your PATH environment variable
 
-    set "PATH=%HOMEDRIVE%%HOMEPATH%\.nvmw;%PATH%"
+    setx PATH "%PATH%;%HOMEDRIVE%%HOMEPATH%\.nvmw"
 
 Usage
 -----
@@ -81,6 +81,7 @@ LICENSE
 (The MIT License)
 
 Copyright (c) 2011 Kazuyuki Honda <hakobera@gmail.com>
+Copyright (c) 2016 Joseph Carroll <jdsalingerjr@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
