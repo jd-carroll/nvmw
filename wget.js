@@ -11,7 +11,14 @@ function wget(uri, callback) {
     var filename = paths[paths.length - 1];
     console.log(filename);
 
-    var http = require(uri.indexOf('https') === 0 ? 'https' : 'http');
+    var proto = options.protocol.slice(0,-1);
+    if (process.env[proto + '_proxy']) {
+        var proxy = url.parse(process.env[proto + '_proxy']);
+        proxy.path = proxy.pathname = options.protocol + '//' + options.host + options.pathname;
+        options = proxy;
+    }
+
+    var http = require(proto);
 
     var req = http.get(options, function (res) {
         if (res.statusCode === 302 || res.statusCode === 301) {
